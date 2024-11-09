@@ -1,3 +1,5 @@
+const idNave = 10;
+
 async function buscarNave(id) {
     try {
         const resposta = await fetch(`https://swapi.dev/api/starships/${id}/`);
@@ -13,4 +15,6 @@ async function buscarNave(id) {
     }
 }
 
-buscarNave(10);
+buscarNave(idNave);
+
+
