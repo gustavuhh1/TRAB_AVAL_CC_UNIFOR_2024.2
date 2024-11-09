@@ -1,5 +1,10 @@
 // Constantes para remover números mágicos
-const VALORES_ITENS = [10, 20, 30, 40, 50];
+const VALORES_ITENS_1 = 10;
+const VALORES_ITENS_2 = 20;
+const VALORES_ITENS_3 = 30; 
+const VALORES_ITENS_4 = 40;
+const VALORES_ITENS_5 = 50;
+const VALORES_ITENS = [VALORES_ITENS_1, VALORES_ITENS_2, VALORES_ITENS_3, VALORES_ITENS_4, VALORES_ITENS_5];
 const MULTIPLICADOR = 3;
 const STATUS_ATIVO = 1;
 const STATUS_INATIVO = 0;
@@ -15,7 +20,11 @@ const CONDICAO_Y = 2;
 const IDADE_PADRAO = 25;
 const IDADE_MARIA = 28;
 const LIMITE_PROCESSAMENTO = 10;
-const VALORES_ITENS_FUNCAO = [5, 7, 9, 11];
+const VALORES_ITENS_A = 5;
+const VALORES_ITENS_B = 7;
+const VALORES_ITENS_C = 9;
+const VALORES_ITENS_D = 11;
+const VALORES_ITENS_FUNCAO = [VALORES_ITENS_A, VALORES_ITENS_B, VALORES_ITENS_C, VALORES_ITENS_D ];
 const DADOS_VALORES = ["Valor 1", "Valor 2", "Valor 3"];
 const VALORES_INFO = ["Dado 1", "Dado 2", "Dado 3"];
 
@@ -98,7 +107,8 @@ function calcular(operacao, valor1, valor2) {
 function processarDados(limite) {
     let resultado = 0;
     for (let i = 1; i <= limite; i++) {
-        if (i % 2 === 0) {
+        const two = 2;
+        if (i % two === 0) {
             resultado += i;
         } else {
             resultado -= i;
@@ -136,6 +146,8 @@ function funcao() {
 
 // Chamadas de função
 principal();
-console.log("Resultado do cálculo:", calcular(OPERACAO_SOMA, 2, 3));
+const dois = 2;
+const tres = 3;
+console.log("Resultado do cálculo:", calcular(OPERACAO_SOMA, dois, tres));
 console.log("Resultado do processamento de dados:", processarDados(LIMITE_PROCESSAMENTO));
 console.log("Resultado da função:", funcao());
