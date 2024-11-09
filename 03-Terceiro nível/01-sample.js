@@ -4,24 +4,24 @@ async function buscarEDetalharNave() {
         const nave = await resposta.json();
 
         const detalhesNave = `
-        Nome: ${nave.name}
-        Modelo: ${nave.model}
-        Fabricante: ${nave.manufacturer}
+            Nome: ${nave.name}
+            Modelo: ${nave.model}
+            Fabricante: ${nave.manufacturer}
         `;
 
-        console.log("Detalhes da Nave:");
+        console.log('Detalhes da Nave:');
         console.log(detalhesNave);
 
-        const tamanhoTripulacao = parseInt(nave.crew);
+        const tamanhoTripulacao = parseInt(nave.crew, 10); // Sempre especifique a base ao usar parseInt
         if (tamanhoTripulacao > 100) {
             console.log('Esta é uma nave grande.');
         } else {
             console.log('Esta é uma nave pequena.');
         }
-
     } catch (erro) {
         console.error('Erro ao buscar detalhes da nave:', erro);
     }
 }
 
 buscarEDetalharNave();
+

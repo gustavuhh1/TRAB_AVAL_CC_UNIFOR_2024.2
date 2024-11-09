@@ -7,7 +7,7 @@ async function buscarPersonagemENave(idPersonagem) {
             const respostaNave = await fetch(personagem.starships[0]);
             const nave = await respostaNave.json();
 
-            const tripulacao = parseInt(nave.crew);
+            const tripulacao = parseInt(nave.crew, 10);
             if (tripulacao > 100) {
                 console.log(`A nave ${nave.name} é considerada grande com ${tripulacao} tripulantes.`);
             } else {
@@ -16,10 +16,10 @@ async function buscarPersonagemENave(idPersonagem) {
         } else {
             console.log(`${personagem.name} não possui naves registradas.`);
         }
-
     } catch (erro) {
         console.error('Erro ao buscar o personagem ou sua nave:', erro);
     }
 }
 
 buscarPersonagemENave(1);
+
