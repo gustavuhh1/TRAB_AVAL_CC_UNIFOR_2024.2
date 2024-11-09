@@ -17,7 +17,7 @@ async function buscarPersonagemENave(idPersonagem) {
             console.log(`${personagem.name} não possui naves registradas.`);
         }
     } catch (erro) {
-        console.error('Erro ao buscar o personagem ou sua nave:', erro);
+        console.error("Erro ao buscar o personagem ou sua nave:", erro);
     }
 }
 

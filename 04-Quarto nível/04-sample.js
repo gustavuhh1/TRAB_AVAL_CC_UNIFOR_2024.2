@@ -3,7 +3,7 @@ async function buscarPersonagem(id) {
     const resposta = await fetch(url);
     
     if (!resposta.ok) {
-        throw new Error('Personagem não encontrado.');
+        throw new Error("Personagem não encontrado.");
     }
     
     const personagem = await resposta.json();

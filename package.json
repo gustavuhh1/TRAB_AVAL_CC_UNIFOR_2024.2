@@ -1,25 +1,4 @@
 {
-  "name": "trab_aval_cc_unifor_2024.2",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "@eslint/js": "^9.14.0",
-    "eslint": "^9.14.0",
-    "globals": "^15.12.0"
-  },
-  "dependencies": {
-    "trab_aval_cc_unifor_2024.2": "file:"
-  }
-}
-
-{
   "name": "trab_aval_cc_unifor_2024.2-main",
   "version": "1.0.0",
   "description": "- Gustavo Martins Rodrigues - 2412858\r - João Antonio Pimentel Moura de Oliveira - 2412855\r - Rodrigo Façanha - 2322641",
@@ -34,5 +13,8 @@
     "@eslint/js": "^9.14.0",
     "eslint": "^9.14.0",
     "globals": "^15.12.0"
+  },
+  "dependencies": {
+    "trab_aval_cc_unifor_2024.2-main": "file:"
   }
 }
