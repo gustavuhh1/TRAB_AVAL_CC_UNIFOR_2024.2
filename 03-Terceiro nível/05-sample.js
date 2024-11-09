@@ -1,9 +1,12 @@
+
+const lmtCustoCred = 10000;
+
 async function buscarVeiculosECalcularCusto() {
     try {
         const resposta = await fetch("https://swapi.dev/api/vehicles/");
         const dados = await resposta.json();
 
-        const veiculosCaros = dados.results.filter((veiculo) => parseInt(veiculo.cost_in_credits, 10) > 10000);
+        const veiculosCaros = dados.results.filter((veiculo) => parseInt(veiculo.cost_in_credits, 10) > lmtCustoCred);
 
         console.log("Veículos caros (mais de 10.000 créditos):");
         veiculosCaros.forEach((veiculo) => {

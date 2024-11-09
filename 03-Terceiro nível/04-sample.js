@@ -1,3 +1,7 @@
+
+
+const quantTripulacao = 100;
+
 async function buscarPersonagemENave(idPersonagem) {
     try {
         const respostaPersonagem = await fetch(`https://swapi.dev/api/people/${idPersonagem}/`);
@@ -8,7 +12,7 @@ async function buscarPersonagemENave(idPersonagem) {
             const nave = await respostaNave.json();
 
             const tripulacao = parseInt(nave.crew, 10);
-            if (tripulacao > 100) {
+            if (tripulacao > quantTripulacao) {
                 console.log(`A nave ${nave.name} é considerada grande com ${tripulacao} tripulantes.`);
             } else {
                 console.log(`A nave ${nave.name} é pequena com ${tripulacao} tripulantes.`);

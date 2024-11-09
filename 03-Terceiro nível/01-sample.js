@@ -1,3 +1,5 @@
+const limiteTripulacao = 100;
+
 async function buscarEDetalharNave() {
     try {
         const resposta = await fetch("https://swapi.dev/api/starships/9/");
@@ -12,8 +14,8 @@ async function buscarEDetalharNave() {
         console.log("Detalhes da Nave:");
         console.log(detalhesNave);
 
-        const tamanhoTripulacao = parseInt(nave.crew, 10); // Sempre especifique a base ao usar parseInt
-        if (tamanhoTripulacao > 100) {
+        const tamanhoTripulacao = parseInt(nave.crew, 10);
+        if (tamanhoTripulacao > limiteTripulacao) {
             console.log("Esta é uma nave grande.");
         } else {
             console.log("Esta é uma nave pequena.");
@@ -24,4 +26,5 @@ async function buscarEDetalharNave() {
 }
 
 buscarEDetalharNave();
+
 
