@@ -39,3 +39,4 @@ const mostrarResultado = (personagem) => {
       </div>`;
 };
 
+buscarPersonagem();
